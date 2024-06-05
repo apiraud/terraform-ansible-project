@@ -1,0 +1,9 @@
+- name: Copy files on servers
+  hosts: websites
+  gather_facts: no
+  tasks:
+    - name: Copy files
+      ansible.builtin.copy:
+        src: "{{ src }}"
+        dest: "{{ dest }}"
+      delegate_to: "{{ delegate_to }}"

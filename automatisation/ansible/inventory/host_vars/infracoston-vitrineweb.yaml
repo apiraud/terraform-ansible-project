@@ -1,0 +1,11 @@
+---
+host: infracoston-vitrineweb.final.cfai24.ajformation.fr
+login: root
+
+src: /automatisation/vitrineweb/
+dest: /var/www/html/
+delegate_to: infracoston-vitrineweb
+
+packages:
+  - sudo
+  - apache2

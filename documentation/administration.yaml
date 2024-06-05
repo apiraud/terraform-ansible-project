@@ -1,0 +1,44 @@
+nom : InfraCoston
+url_projet : https://github.com/CFAI2024-CPLR/InfraCoston
+les_complices:
+  - name: Jérome AVOND
+    login: javond
+    ssh_key: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBnoxKR7llvIC/zepZokSb2FyqO69BVCiFAWKTULE4bL jerome@djay
+  - name : Solène CAGNOLATI
+    login : scagnolati
+    ssh_key : ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIDTXRBA6D9VoLGWih6wni0gncw1+SSL9SB/Q94MDvdv solene@Solene
+  - name: Thomas COLLADO
+    login: tcollado
+    ssh_key: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILekdVmeiTmUn4yXBHUb7bT6tNHpin0IetkBc1rgwYMm thomas@MacBook-Air-de-Thomas.local
+  - name: Lenny COSTON
+    login: lcoston
+    ssh_key: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHpcynteVTI8osgZHT/XJ08EkMPlnv+PEl7QSA8XIxWC lenny@DESKTOP-5GDKPNM
+  - name: Florence EXTRAT
+    login: fextrat
+    ssh_key: AAAAC3NzaC1lZDI1NTE5AAAAILYA9CTS2nfnDUqGRm91z59dVZLov3o20eC2KdZ9bNfz florence@MacBook-Air-de-Florence.local
+  - name: Estelle GRANGE
+    login: egrange
+    ssh_key: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICinaDMjsX+q8SNXc/m3/yMmJMIZw5M0ejrh9l4eyEVz estelle.grange@hotmail.fr
+  - name: Amélie PIRAUD
+    login: apiraud
+    ssh_key: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMk4kWtyx8MVumPvtGL3QH7Mlv5aDR0/3E3+fDoahWQ9 pirau@DESKTOP-G8SMLJA
+les_dns:
+  - terraform:
+    dns: infracoston-terraform.final.cfai24.ajformation.fr
+    ip: 2a03:5840:111:1024:cafe:cafe:cafe:0001
+  - bdd:
+      dns: infracoston-bdd1.final.cfai24.ajformation.fr
+      ip: 2a03:5840:111:1024:cafe:cafe:cafe:0002
+  - adminweb:
+      dns: infracoston-adminweb.final.cfai24.ajformation.fr
+      ip: 2a03:5840:111:1024:cafe:cafe:cafe:0005
+  - vitrineweb:
+      dns: infracoston-vitrineweb.final.cfai24.ajformation.fr
+      ip: 2a03:5840:111:1024:cafe:cafe:cafe:0004
+bdd:
+  name: infracoston_bdd1
+  user_root: root
+  password_root: 2^2egale4
+  user: infracoston
+  password: 2^2egale4
+  ssh_password: 2^2egale4

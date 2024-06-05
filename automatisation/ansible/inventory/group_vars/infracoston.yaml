@@ -1,0 +1,27 @@
+default_shell: /bin/bash
+
+myusers:
+  - login: lcoston
+    groups: sudo
+    pubkey: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHpcynteVTI8osgZHT/XJ08EkMPlnv+PEl7QSA8XIxWC lenny@DESKTOP-5GDKPNM
+  - login: fextrat
+    groups: sudo
+    pubkey: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILYA9CTS2nfnDUqGRm91z59dVZLov3o20eC2KdZ9bNfz florence@MacBook-Air-de-Florence.local
+  - login: apiraud
+    groups: sudo
+    pubkey: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMk4kWtyx8MVumPvtGL3QH7Mlv5aDR0/3E3+fDoahWQ9 pirau@DESKTOP-G8SMLJA
+  - login: scagnolati
+    groups: sudo
+    pubkey: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIDTXRBA6D9VoLGWih6wni0gncw1+SSL9SB/Q94MDvdv solene@Solene
+  - login: egrange
+    groups: sudo
+    pubkey: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICinaDMjsX+q8SNXc/m3/yMmJMIZw5M0ejrh9l4eyEVz estelle.grange@hotmail.fr
+  - login: tcollado
+    groups: sudo
+    pubkey: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILekdVmeiTmUn4yXBHUb7bT6tNHpin0IetkBc1rgwYMm thomas@MacBook-Air-de-Thomas.local
+  - login: javond
+    groups: sudo
+    pubkey: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBnoxKR7llvIC/zepZokSb2FyqO69BVCiFAWKTULE4bL jerome@djay
+  - login: infracoston
+    groups: sudo
+    pubkey: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCv58LDpMrvnLoO+AZu/3bneu8E54LSPEy81HcTaaSydfwmcsTwyGEYwD/BfEWb3e4sAHpkARpys04R4wjScSBNbcI4IQ53eG/o6dKhs6bCyJVXad/rEAhWemj5fIP/alFhvdufDzyPnSMOOSZfwdcT/LeCIBeAYEjCTvuNQUGlcUTGe0xGazyvnGFViyWwiQR8kx0K6l+X879QoiSDn+jJ0FpJ874xoItcgftPLdipVImPkBl42wjhkwbUdhtg1wwP6XgCZN8JFxwyVmS/ISjZH6xv4GU6nJjPYpmZ1594BPgGmPosbW9Xy4IjSfG+CNQSOUKymhb0OKcvc6/gGocHhWmLskEHGrs1woU6KCjhj1KJQx1r+X3xwAXN9OfDy+jiHg+k3hbaMRoTxSqlOGS8A640YWNW0H5hlkKZBCNUeag8ohQQM4/eWefIBcRzMEiJ60nfFvkLvlwQn9zedfkBejO5VVjTPvoUXZiFbWks/pzbY7bsyMqGBFofuuaSzEc= root@infracoston-terraform

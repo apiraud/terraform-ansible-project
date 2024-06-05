@@ -1,0 +1,29 @@
+---
+- hosts: infracoston
+  become: true
+  become_method: sudo
+  gather_facts: no
+  tasks:
+    - name: Create users
+      ansible.builtin.user:
+        name: "{{ item.login }}"
+        shell: "{{ default_shell }}"
+        groups: "{{ item.groups }}"
+        append: yes
+      loop: "{{ myusers }}"
+
+    - name: Set users authorized key
+      #removing all the authorized keys already set
+      ansible.posix.authorized_key:
+        user: "{{ item.login }}"
+        key: "{{ item.pubkey }}"
+        state: present
+        exclusive: true
+      loop: "{{ myusers }}"
+
+    - name: Ensure sudo group has NOPASSWD directive
+      ansible.builtin.lineinfile:
+        dest: /etc/sudoers
+        regexp: '^%sudo'
+        line: '%sudo ALL=(ALL) NOPASSWD:ALL'
+        validate: '/usr/sbin/visudo -cf %s'

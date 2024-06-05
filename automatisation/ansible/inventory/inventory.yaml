@@ -1,0 +1,12 @@
+infracoston:
+  vars:
+    ansible_host: "{{ host }}"
+    ansible_user: "{{ login }}"
+  children:
+    websites:
+      hosts:
+        infracoston-adminweb:
+        infracoston-vitrineweb:
+    bdd:
+      hosts:
+       infracoston-bdd1:

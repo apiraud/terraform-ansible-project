@@ -1,0 +1,19 @@
+- hosts: infracoston
+  become: yes
+  become_method: sudo
+  tasks:
+    - name: Install packages (Debian)
+      ansible.builtin.apt:
+        name: "{{ item }}"
+        state: present
+        update_cache: true
+      when: ansible_os_family == "Debian"
+      loop: "{{ packages }}"
+
+    - name: Install packages (RedHat)
+      ansible.builtin.dnf:
+        name: "{{ item }}"
+        state: latest
+        update_cache: true
+      when: ansible_os_family == "RedHat"
+      loop: "{{ packages }}"

@@ -1,0 +1,28 @@
+ssh_public_keys: |
+  ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCv58LDpMrvnLoO+AZu/3bneu8E54LSPEy81HcTaaSydfwmcsTwyGEYwD/BfEWb3e4sAHpkARpys04R4wjScSBNbcI4IQ53eG/o6dKhs6bCyJVXad/rEAhWemj5fIP/alFhvdufDzyPnSMOOSZfwdcT/LeCIBeAYEjCTvuNQUGlcUTGe0xGazyvnGFViyWwiQR8kx0K6l+X879QoiSDn+jJ0FpJ874xoItcgftPLdipVImPkBl42wjhkwbUdhtg1wwP6XgCZN8JFxwyVmS/ISjZH6xv4GU6nJjPYpmZ1594BPgGmPosbW9Xy4IjSfG+CNQSOUKymhb0OKcvc6/gGocHhWmLskEHGrs1woU6KCjhj1KJQx1r+X3xwAXN9OfDy+jiHg+k3hbaMRoTxSqlOGS8A640YWNW0H5hlkKZBCNUeag8ohQQM4/eWefIBcRzMEiJ60nfFvkLvlwQn9zedfkBejO5VVjTPvoUXZiFbWks/pzbY7bsyMqGBFofuuaSzEc= root@infracoston-terraform
+  ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBnoxKR7llvIC/zepZokSb2FyqO69BVCiFAWKTULE4bL jerome@djay
+target_node: cfai2024
+pool: scagnolati
+
+containers:
+  - name: infracoston-bdd1
+    cpuunits: 512
+    rootfs_size: 8G
+    memory: 512
+    ostemplate: local:vztmpl/debian-12-standard_12.2-1_amd64.tar.zst
+    ipv6: 2a03:5840:111:1024:cafe:cafe:cafe:2/64
+    class: bdd
+  - name: infracoston-adminweb
+    cpuunits: 512
+    rootfs_size: 8G
+    memory: 512
+    ostemplate: local:vztmpl/debian-12-standard_12.2-1_amd64.tar.zst
+    ipv6: 2a03:5840:111:1024:cafe:cafe:cafe:5/64
+    class: websites
+  - name: infracoston-vitrineweb
+    cpuunits: 512
+    rootfs_size: 8G
+    memory: 512
+    ostemplate: local:vztmpl/debian-12-standard_12.2-1_amd64.tar.zst
+    ipv6: 2a03:5840:111:1024:cafe:cafe:cafe:4/64
+    class: websites

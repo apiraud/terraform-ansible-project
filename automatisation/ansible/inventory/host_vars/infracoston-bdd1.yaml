@@ -1,0 +1,13 @@
+---
+host: infracoston-bdd1.final.cfai24.ajformation.fr
+login: root
+
+packages:
+  - sudo
+  - mariadb-server
+  - python3-pymysql
+
+mariadb_root_password: "2^2egale4"
+mariadb_database: "infracoston_bdd1"
+mariadb_user: "infracoston"
+mariadb_password: "2^2egale4"
